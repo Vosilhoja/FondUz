@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "title": "Привет мир!",
+    "description": "Это пример локализации"
+  },
+  "SearchPage": {
+    "title": "Поиск",
+    "placeholder": "Введите запрос...",
+    "resultsFound": "Найдено результатов: {count}",
+    "noResults": "По вашему запросу ничего не найдено",
+    "backToHome": "Вернуться на главную"
+  }
+}
