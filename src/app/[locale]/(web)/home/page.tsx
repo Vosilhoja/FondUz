@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { useState } from "react";
@@ -110,5 +111,12 @@ export default function HomePage() {
         </Container>
       </section>
     </div>
+=======
+export default async function HomePage() {
+  return (
+    <>
+      HomePage
+    </>
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
   );
 }

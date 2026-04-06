@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { useState } from "react";
@@ -77,3 +78,14 @@ export default function BlogPage() {
     </div>
   );
 }
+=======
+export default async function BlogPage() {
+  return (
+    <>
+      BlogPage
+    </>
+  );
+}
+
+
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { useState } from "react";
@@ -59,5 +60,12 @@ export default function FAQPage() {
         ))}
       </div>
     </Container>
+=======
+export default async function FaqPage() {
+  return (
+    <>
+      FaqPage
+    </>
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
   );
 }

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "Navigation": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
@@ -118,5 +119,17 @@
     "section2Desc": "Shaxsiy ma'lumotlar faqat xizmatlardan foydalanishni ta'minlash va siz bilan bog'lanish uchun ishlatiladi.",
     "section3Title": "3. Ma'lumotlarni himoya qilish",
     "section3Desc": "Biz ruxsatsiz kirishni oldini olish uchun zamonaviy shifrlash usullaridan foydalanamiz."
+=======
+  "HomePage": {
+    "title": "Ассалому Алейкум!",
+    "description": "Бу локализация намунаси"
+  },
+  "SearchPage": {
+    "title": "Қидирув",
+    "placeholder": "Қидирувни киритинг...",
+    "resultsFound": "Натижалар сони: {count}",
+    "noResults": "Сизнинг сўровингиз бўйича ҳеч нарса топилмади",
+    "backToHome": "Бош саҳифага қайтиш"
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
   }
 }

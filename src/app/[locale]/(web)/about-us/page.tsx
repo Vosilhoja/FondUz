@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useTranslations } from "next-intl";
@@ -58,5 +59,12 @@ export default function AboutUsPage() {
         </div>
       </Container>
     </div>
+=======
+export default async function AboutUsPage() {
+  return (
+    <>
+      AboutUsPage
+    </>
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
   );
 }

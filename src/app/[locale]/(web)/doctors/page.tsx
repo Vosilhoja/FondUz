@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React, { useState } from "react";
@@ -74,5 +75,12 @@ export default function DoctorsPage() {
         </div>
       </Container>
     </div>
+=======
+export default async function DoctorsPage() {
+  return (
+    <>  
+      DoctorsPage
+    </>
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
   );
 }

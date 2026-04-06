@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useTranslations } from "next-intl";
@@ -54,3 +55,13 @@ export default function PricesPage() {
     </div>
   );
 }
+=======
+export default async function PricesPage() {
+  return (
+    <>
+      PricesPage
+    </>
+  );
+}
+
+>>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
