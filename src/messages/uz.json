@@ -1,0 +1,122 @@
+{
+  "Navigation": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "blog": "Blog",
+    "doctors": "Shifokorlar",
+    "prices": "Narxlar",
+    "contact": "Bog'lanish",
+    "faq": "FAQ",
+    "login": "Kirish",
+    "searchPlaceholder": "Sayt bo'yicha qidiruv..."
+  },
+  "Footer": {
+    "newsletterTitle": "Yangiliklardan xabardor bo'lish uchun obuna bo'ling.",
+    "emailPlaceholder": "Emailingizni kiriting",
+    "subscribeButton": "Obuna bo'lish",
+    "privacyNote": "Siz FondUz maxfiylik siyosatiga rozilik bildirasiz.",
+    "services": "Xizmatlar",
+    "doctors": "Bizning shifokorlar",
+    "pricing": "Bizning narxlar",
+    "blog": "Bizning blog",
+    "about": "Loyiha haqida",
+    "followUs": "Bizni kuzatib boring",
+    "privacyPolicy": "Maxfiylik siyosati",
+    "copyright": "© 2024 FondUz. Barcha huquqlar himoyalangan.",
+    "terms": "Foydalanish shartlari",
+    "cookies": "Cookie sozlamalari"
+  },
+  "HomePage": {
+    "heroBadge": "Sog'lig'ingiz - bizning ustuvorligimiz",
+    "heroTitle": "Sizning salomatligingiz uchun jamoaviy harakat",
+    "heroSub": "Sog'lig'ingiz bizning ustuvorligimiz. Malakali shifokorlar va zamonaviy uslublar bilan tanishing.",
+    "joinNow": "Hozir yozilish",
+    "learnMore": "Batafsil ma'lumot",
+    "pricingTitle": "Xizmat paketlari",
+    "pricingSub": "Siz va yaqinlaringiz uchun optimal tibbiy xizmat rejasini tanlang.",
+    "whyTitle": "Nima uchun FondUz tanlanadi?",
+    "whySub": "Biz eng yaxshi tibbiy tajriba va zamonaviy texnologiyalarni yuqori sifatli parvarish uchun birlashtiramiz.",
+    "cta": "Qo'shilish"
+  },
+  "SearchPage": {
+    "title": "Qidiruv natijalari",
+    "queryLabel": "So'rov bo'yicha:",
+    "placeholder": "So'rovni kiriting...",
+    "resultsFound": "Natijalar topildi: {count}",
+    "noResults": "Sizning so'rovingiz bo'yicha hech narsa topilmadi",
+    "backToHome": "Bosh sahifaga qaytish",
+    "doctorsSection": "Topilgan shifokorlar",
+    "servicesSection": "Xizmatlar va tahlillar"
+  },
+  "Auth": {
+    "login": "Tizimga kirish",
+    "email": "Elektron pochta",
+    "password": "Parol",
+    "submit": "Kirish",
+    "noAccount": "Hisobingiz yo'qmi?",
+    "register": "Ro'yxatdan o'tish",
+    "subTitle": "FondUz shaxsiy kabinetiga kirish uchun ma'lumotlaringizni kiriting."
+  },
+  "AboutPage": {
+    "title": "FondUz missiyasi",
+    "sub": "Biz yuqori sifatli tibbiy yordam har bir kishi uchun bir teginish masofasida bo'lgan kelajakni yaratmoqdamiz. Bizning platformamiz ilg'or texnologiyalar va insoniy g'amxo'rlikni birlashtiradi.",
+    "historyBadge": "Bizning tariximiz",
+    "historyTitle": "Har bir qarorda innovatsiya",
+    "historyDesc": "FondUz shifokorlar va IT-mutaxassislar guruhining kichik tashabbusi sifatida boshlangan. Bugungi kunda bu keng ko'lamli ekotizimdir.",
+    "doctorsCount": "150+",
+    "doctorsLabel": "Shifokorlar",
+    "patientsCount": "10k+",
+    "patientsLabel": "Bemorlar",
+    "quote": "Biz shunchaki davolamaymiz, biz har bir insonning hayot sifatini yaxshilash haqida qayg'uramiz."
+  },
+  "BlogPage": {
+    "title": "FondUz blogi",
+    "sub": "Tibbiyot, sog'lom turmush tarzi haqidagi dolzarb maqolalar va mutaxassislarimizdan maslahatlar.",
+    "newsletterTitle": "Yangiliklardan xabardor bo'ling",
+    "newsletterSub": "Yangi maqolalar va tibbiy maslahatlarni to'g'ridan-to'g'ri pochtangizga olish uchun obuna bo'ling.",
+    "readMore": "Batafsil o'qish"
+  },
+  "ContactsPage": {
+    "title": "Biz bilan bog'laning",
+    "sub": "Biz har doim takliflaringizni tinglashga yoki savollaringizga javob berishga tayyormiz. Jamoamiz 24 soat ichida siz bilan bog'lanadi.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "Email",
+    "formName": "Ismingiz",
+    "formEmail": "Elektron pochta",
+    "formMessage": "Xabar",
+    "formSubmit": "So'rovni yuborish"
+  },
+  "DoctorsPage": {
+    "title": "Bizning mutaxassislar",
+    "sub": "Sizga har qanday vaqtda yordam berishga tayyor bo'lgan yuqori malakali shifokorlar jamoasi.",
+    "searchPlaceholder": "Ism yoki mutaxassislik bo'yicha qidirish...",
+    "btnSearch": "Qidirish",
+    "experience": "Tajriba:",
+    "btnBook": "Yozilish"
+  },
+  "PricesPage": {
+    "title": "Tarif rejalari",
+    "sub": "Biz har bir bemor uchun moslashuvchan shartlarni taklif etamiz. Mos keladigan xizmat paketini tanlang.",
+    "period": "/davr",
+    "btnSelect": "Rejani tanlash"
+  },
+  "FAQPage": {
+    "title": "Ko'p so'raladigan savollar",
+    "sub": "Xizmatlarimiz va platformamiz haqidagi eng keng tarqalgan savollarga javoblarni toping.",
+    "items": [
+      { "q": "FondUz nima?", "a": "FondUz - sog'liqni saqlash sohasidagi innovatsion platforma." },
+      { "q": "Shifokorlar qanday tanlanadi?", "a": "Har bir shifokor kamida 5 yillik tajribaga ega." },
+      { "q": "Xizmatlar pullikmi?", "a": "Bizda ham bepul, ham pullik xizmatlar mavjud." }
+    ]
+  },
+  "PrivacyPage": {
+    "title": "Maxfiylik siyosati",
+    "sub": "Sizning maxfiyligingiz biz uchun muhim. Ushbu hujjatda biz ma'lumotlaringizni qanday himoya qilishimizni tushuntiramiz.",
+    "section1Title": "1. Ma'lumotlarni yig'ish",
+    "section1Desc": "Biz siz to'g'ridan-to'g'ri taqdim etgan ma'lumotlarni, shuningdek texnik ma'lumotlarni yig'amiz.",
+    "section2Title": "2. Ma'lumotlardan foydalanish",
+    "section2Desc": "Shaxsiy ma'lumotlar faqat xizmatlardan foydalanishni ta'minlash va siz bilan bog'lanish uchun ishlatiladi.",
+    "section3Title": "3. Ma'lumotlarni himoya qilish",
+    "section3Desc": "Biz ruxsatsiz kirishni oldini olish uchun zamonaviy shifrlash usullaridan foydalanamiz."
+  }
+}
