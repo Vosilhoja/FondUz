@@ -1,71 +1,49 @@
-<<<<<<< HEAD
 "use client";
 
-import React, { useState } from "react";
-import { useTranslations } from "next-intl";
 import { Container } from "@/src/components/ui/Container";
-import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function FAQPage() {
   const t = useTranslations("FAQPage");
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  // Get items from translations
-  // Note: next-intl doesn't support arrays directly via t("items"), 
-  // but we can iterate if we structured them, or just use a fixed number of items.
-  // For simplicity since I know there are 3 items:
-  const faqs = [
-    { q: t("items.0.q"), a: t("items.0.a") },
-    { q: t("items.1.q"), a: t("items.1.a") },
-    { q: t("items.2.q"), a: t("items.2.a") },
-  ];
+  const items = t.raw("items") as { q: string; a: string }[];
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <Container className="py-24 pb-48">
-      <div className="max-w-3xl mx-auto text-center mb-24">
-        <h1 className="text-4xl md:text-6xl font-serif text-primary-green mb-8">{t("title")}</h1>
-        <p className="text-lg text-primary-green/50 leading-relaxed italic-not-needed px-10">{t("sub")}</p>
+    <Container className="py-12 md:py-16">
+      <div className="mx-auto mb-12 max-w-2xl text-center md:mb-16">
+        <h1 className="font-serif text-3xl text-foreground md:text-4xl lg:text-5xl">{t("title")}</h1>
+        <p className="mt-4 text-sm text-muted-foreground md:text-base">{t("sub")}</p>
       </div>
 
-      <div className="max-w-3xl mx-auto space-y-4">
-        {faqs.map((faq, i) => (
-          <div key={i} className="group overflow-hidden rounded-[2rem] border border-sage/10 bg-white transition-all shadow-sm">
-             <button 
-                onClick={() => setActiveIndex(activeIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-8 md:p-10 text-left focus:outline-none"
-             >
-                <h3 className={`text-xl md:text-2xl font-serif transition-colors duration-300 ${activeIndex === i ? 'text-sage' : 'text-primary-green'}`}>{faq.q}</h3>
-                <motion.div 
-                  animate={{ rotate: activeIndex === i ? 45 : 0 }}
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300 ${activeIndex === i ? 'bg-primary-green text-cream' : 'bg-sage/5 text-primary-green'}`}
+      <div className="mx-auto max-w-2xl space-y-2">
+        {items.map((faq, i) => {
+          const isOpen = open === i;
+          return (
+            <div key={faq.q} className="rounded-md border border-border bg-card">
+              <button
+                type="button"
+                onClick={() => setOpen(isOpen ? null : i)}
+                className="flex w-full items-center justify-between gap-4 p-4 text-left md:p-5"
+              >
+                <span className="font-serif text-base text-foreground md:text-lg">{faq.q}</span>
+                <span
+                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md border text-lg leading-none transition-transform ${
+                    isOpen ? "rotate-45 border-primary bg-muted" : "border-border"
+                  }`}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </motion.div>
-             </button>
-             <AnimatePresence>
-               {activeIndex === i && (
-                 <motion.div 
-                   initial={{ height: 0, opacity: 0 }}
-                   animate={{ height: "auto", opacity: 1 }}
-                   exit={{ height: 0, opacity: 0 }}
-                   className="overflow-hidden"
-                 >
-                   <div className="px-8 md:px-10 pb-10 text-primary-green/50 leading-relaxed text-lg border-t border-sage/5 pt-8">
-                     {faq.a}
-                   </div>
-                 </motion.div>
-               )}
-             </AnimatePresence>
-          </div>
-        ))}
+                  +
+                </span>
+              </button>
+              {isOpen ? (
+                <div className="border-t border-border px-4 pb-4 pt-2 text-sm leading-relaxed text-muted-foreground md:px-5 md:pb-5">
+                  {faq.a}
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
       </div>
     </Container>
-=======
-export default async function FaqPage() {
-  return (
-    <>
-      FaqPage
-    </>
->>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
   );
 }

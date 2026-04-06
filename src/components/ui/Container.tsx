@@ -1,9 +1,13 @@
-import React from 'react';
+import type { ReactNode } from "react";
 
-export const Container = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => {
+export function Container({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <div className={`mx-auto max-w-[1320px] px-4 md:px-6 w-full ${className}`}>
-      {children}
-    </div>
+    <div className={`mx-auto w-full max-w-[1320px] px-4 sm:px-5 md:px-6 ${className}`}>{children}</div>
   );
-};
+}

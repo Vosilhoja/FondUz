@@ -1,36 +1,42 @@
 import "@/src/styles/globals.css";
+import { AppProviders } from "@/src/components/providers/AppProviders";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-<<<<<<< HEAD
-import { Inter, Fraunces } from 'next/font/google'
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { Inter, Fraunces } from "next/font/google";
+import { routing } from "@/src/i18n/routing";
+import type { ReactNode } from "react";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-})
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-serif',
-})
-=======
->>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
-export default async function LocaleLayout({children, params}: {children: React.ReactNode, params: {locale: string}}) {
-  const { locale } = await params
-  const messages = await getMessages()
-  
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
-<<<<<<< HEAD
-    <html lang={ locale } className={`${inter.variable} ${fraunces.variable}`}>
-      <body className="antialiased">
+    <html lang={locale} className={`${inter.variable} ${fraunces.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen antialiased bg-background text-foreground">
         <NextIntlClientProvider locale={locale} messages={messages}>
-=======
-    <html lang={ locale }>
-      <body>
-        <NextIntlClientProvider messages={messages}>
->>>>>>> 0442d2e69fe3c52979a9449dd1298340240bc1cc
-          { children }
+          <AppProviders>{children}</AppProviders>
         </NextIntlClientProvider>
       </body>
     </html>
