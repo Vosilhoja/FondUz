@@ -24,16 +24,16 @@
 
 /* Светлая тема: фон чуть светлее прежнего */
 :root {
-  --background: #f7f8f4;
-  --foreground: #0c2a1c;
+  --background: #f4f8f3;
+  --foreground: #173126;
   --card: #ffffff;
-  --card-foreground: #0c2a1c;
-  --muted: #e8ebe3;
-  --muted-foreground: #5a6b62;
-  --border: #d9e0d4;
-  --primary-green: #0d3d28;
-  --sage: #b8c9a8;
-  --cream: #eef1e6;
+  --card-foreground: #173126;
+  --muted: #eaf2e7;
+  --muted-foreground: #5f746a;
+  --border: #d5e5d4;
+  --primary-green: #3d8f63;
+  --sage: #b8d9c1;
+  --cream: #f1f8ef;
   --primary: var(--primary-green);
   --primary-foreground: #f4f6f0;
   --accent: var(--sage);
@@ -60,7 +60,9 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top right, #e8f6e8 0%, transparent 32%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   margin: 0;
@@ -76,4 +78,12 @@ h5,
 h6 {
   font-family: var(--font-serif);
   font-weight: 600;
+}
+
+* {
+  border-color: var(--border);
+}
+
+button {
+  cursor: pointer;
 }

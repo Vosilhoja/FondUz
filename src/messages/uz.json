@@ -1,76 +1,132 @@
 {
+  "common": {
+    "brand": "FondUz",
+    "view": "Ko'rish",
+    "viewAll": "Barchasini ko'rish",
+    "backToList": "Ro'yxatga qaytish"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Loyiha haqida",
+    "services": "Yo'nalishlar",
+    "doctors": "Shifokorlar",
+    "prices": "Narxlar",
+    "news": "Yangiliklar",
+    "contacts": "Aloqa",
+    "faqs": "FAQ"
+  },
+  "home": {
+    "heroTitle": "Tibbiy fondlar agregator platformasi",
+    "heroSubtitle": "Yo'nalishni tanlab, hamkor fondlarning aniq kontakt va havolalariga o'ting.",
+    "heroCta": "Fondlarni ko'rish",
+    "activityTitle": "Bizning faoliyatimiz",
+    "activityText": "FondUz foydalanuvchi ehtiyojini mos tibbiy yo'nalish bilan bog'laydi, hamkor fondlar kontaktlarini ko'rsatadi va murojaat yo'lini aniq shaklda beradi. Platforma ma'lumotni tartibli ko'rinishda taqdim etadi, tanlov jarayonini yengillashtiradi va ortiqcha bosqichlarsiz kerakli xizmatga yo'naltiradi.",
+    "newsTitle": "Yangiliklar",
+    "newsSubtitle": "Platforma va hamkorlar bo'yicha qisqa yangilanishlar.",
+    "faqsTitle": "Ko'p beriladigan savollar",
+    "faqsSubtitle": "Platforma ishlashi bo'yicha asosiy javoblar.",
+    "viewAllNews": "Barcha yangiliklarni ko'rish",
+    "viewAllFaqs": "Barchasini ko'rish"
+  },
+  "about": {
+    "title": "FondUz platformasi haqida",
+    "subtitle": "FondUz klinik qabul o'tkazmaydi. Platforma foydalanuvchi va hamkor fondlar o'rtasida ko'prik vazifasini bajaradi.",
+    "body": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "services": {
+    "title": "Tibbiy yo'nalishlar",
+    "subtitle": "Kasbni tanlang va hamkor fondlar ro'yxatiga o'ting.",
+    "fundsCount": "{count} ta fond",
+    "open": "Ko'rish",
+    "back": "Barcha yo'nalishlar",
+    "partnerTitle": "Hamkor fond",
+    "phone": "Telefon",
+    "website": "Sayt",
+    "extraInfo": "Qo'shimcha"
+  },
+  "doctors": {
+    "title": "Mutaxassislar",
+    "subtitle": "Kasb va yo'nalishlar bo'yicha yo'naltiruvchi mutaxassis kartalari.",
+    "open": "Ko'rish",
+    "email": "Email",
+    "phone": "Telefon"
+  },
+  "prices": {
+    "title": "Paketlar va narxlar",
+    "subtitle": "Xizmatlarni qulay ko'rinishda taqqoslang. Yakuniy shartlar hamkorlarda aniqlanadi.",
+    "toggleList": "Ro'yxat",
+    "toggleCards": "Kartalar",
+    "includes": "Tarkib"
+  },
+  "news": {
+    "title": "Platforma yangiliklari",
+    "subtitle": "Yo'nalishlar va hamkor fondlar bo'yicha dolzarb ma'lumotlar.",
+    "open": "Ko'rish",
+    "back": "Barcha yangiliklar"
+  },
+  "contacts": {
+    "title": "Aloqa",
+    "subtitle": "Platforma bo'yicha savollar uchun quyidagi kontaktlardan foydalaning.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "Email",
+    "addressLabel": "Manzil",
+    "phoneValue": "+998 71 000 00 00",
+    "emailValue": "info@fonduz.uz",
+    "addressValue": "Toshkent, Namunaviy ko'cha, 1"
+  },
+  "faqs": {
+    "title": "Ko'p beriladigan savollar",
+    "subtitle": "Bridge-platforma bo'yicha asosiy savollar.",
+    "items": [
+      { "question": "Bu klinikami?", "answer": "Yo'q. FondUz - hamkor fondlarga yo'naltiruvchi agregator platforma." },
+      { "question": "Qanday yozilaman?", "answer": "Kerakli yo'nalishni ochib, hamkor telefon yoki saytiga o'ting." },
+      { "question": "Saytdagi ma'lumotlar qayerdan olinadi?", "answer": "Hozircha tiplangan mock ma'lumotlar ishlatiladi, keyin API ulanadi." },
+      { "question": "Narxlarni solishtirish mumkinmi?", "answer": "Ha, narxlar bo'limida paketlar va tarkibi ko'rsatiladi." }
+    ]
+  },
+  "forms": {
+    "name": "Ism",
+    "email": "Email",
+    "message": "Xabar",
+    "submit": "Yuborish",
+    "success": "Xabar muvaffaqiyatli yuborildi."
+  },
+  "errors": {
+    "nameRequired": "Ismingizni kiriting",
+    "emailInvalid": "To'g'ri email kiriting",
+    "messageMin": "Xabar kamida 10 ta belgidan iborat bo'lishi kerak"
+  },
+  "footer": {
+    "description": "FondUz - tibbiy yo'nalishlar va hamkor fondlar agregator platformasi.",
+    "copyright": "© 2026 FondUz. Barcha huquqlar himoyalangan."
+  },
   "Common": {
-    "themeLight": "Yorug‘ tema",
-    "themeDark": "Qorong‘u tema"
+    "themeLight": "Yorug tema",
+    "themeDark": "Qorongu tema"
   },
   "Navigation": {
     "home": "Bosh sahifa",
-    "about": "Klinika haqida",
-    "services": "Xizmatlar",
+    "about": "Loyiha haqida",
+    "services": "Yonalishlar",
     "blog": "Yangiliklar",
     "doctors": "Shifokorlar",
     "prices": "Narxlar",
     "contact": "Aloqa",
     "faq": "FAQ",
-    "login": "Kirish",
-    "searchPlaceholder": "Sayt bo‘yicha qidiruv..."
-  },
-  "Footer": {
-    "newsletterTitle": "Yangi yo‘nalishlar va hamkorlar haqida qisqacha.",
-    "emailPlaceholder": "Emailingiz",
-    "subscribeButton": "Obuna",
-    "privacyNote": "Tugmani bosish orqali maxfiylik siyosatiga rozilik bildirasiz.",
-    "services": "Bo‘limlar",
-    "doctors": "Shifokorlar",
-    "pricing": "Narxlar",
-    "blog": "Yangiliklar",
-    "about": "Loyiha haqida",
-    "followUs": "Ijtimoiy tarmoqlar",
-    "privacyPolicy": "Maxfiylik siyosati",
-    "copyright": "© 2026 FondUz. Barcha huquqlar himoyalangan.",
-    "terms": "Foydalanish shartlari",
-    "cookies": "Cookie",
-    "bridgeNote": "Axborot ko‘prigi: yo‘nalish va hamkor kontaktlarini topishda yordam beramiz."
-  },
-  "HomePage": {
-    "heroBadge": "Tibbiy xizmatlar yo‘riqnomasi",
-    "heroTitle": "Kerakli yo‘nalish va kontaktlarni toping",
-    "heroSub": "Biz poliklinika emasmiz — xizmat-ko‘makchi: yo‘nalishlar, shifokorlar, narxlar va tekshirilgan hamkorlarning telefoni va sayti.",
-    "joinNow": "Xizmatlarni ko‘rish",
-    "learnMore": "Klinika haqida",
-    "pricingTitle": "Paketlar bo‘yicha orientir",
-    "pricingSub": "Taxminiy rejalarni — yakuniy shartlarni hamkordan aniqlang. API ulanguncha ma’lumotlar vaqtinchalik.",
-    "whyTitle": "Nima uchun FondUz orqali",
-    "whySub": "Bitta kirish — bir nechta yo‘nalishlar, shaffof kontaktlar va majburiy qo‘ng‘iroqlarsiz tanlov.",
-    "cta": "Aloqa",
-    "planBasic": "Bazaviy",
-    "planStandard": "Standart",
-    "planPremium": "Premium",
-    "perMonth": "/oy",
-    "featSupport": "Yo‘nalish tanlash",
-    "featOnline": "Hamkor kontaktlari",
-    "featMethods": "Dolzarb narxlar (keyin API)",
-    "whyCard1Title": "Tez",
-    "whyCard1Desc": "Yo‘nalishlar ro‘yxati va kontaktlarga o‘tish.",
-    "whyCard2Title": "Tushunarli",
-    "whyCard2Desc": "Xizmat sahifasida telefon va sayt.",
-    "whyCard3Title": "Bosimsiz",
-    "whyCard3Desc": "Qayerga murojaat qilishni o‘zingiz tanlaysiz.",
-    "whyCard4Title": "API ga tayyor",
-    "whyCard4Desc": ".env orqali ulagach, kontent avtomatik yangilanadi."
+    "searchPlaceholder": "Qidiruv"
   },
   "SearchPage": {
     "title": "Qidiruv",
     "submit": "Topish",
-    "queryLabel": "So‘rov:",
-    "placeholder": "So‘rovni kiriting...",
+    "queryLabel": "Sorov:",
+    "placeholder": "Sorovni kiriting...",
     "resultsFound": "Topildi: {count}",
-    "noResults": "Hech narsa topilmadi",
+    "noResults": "Topilmadi",
     "backToHome": "Bosh sahifaga",
-    "loading": "Yuklanmoqda…",
-    "hint": "Maslahat: yurak, shifokorlar, aloqa…",
+    "loading": "Yuklanmoqda...",
+    "hint": "Maslahat",
     "serviceNames": {
-      "heart": "Yurak va tomirlar",
+      "heart": "Yurak",
       "neurology": "Nevrologiya",
       "orthopedics": "Ortopediya",
       "pediatrics": "Pediatriya",
@@ -79,175 +135,20 @@
   },
   "Auth": {
     "login": "Kirish",
-    "email": "Elektron pochta",
+    "email": "Email",
     "password": "Parol",
     "submit": "Kirish",
-    "noAccount": "Hisob yo‘qmi?",
-    "register": "Ro‘yxatdan o‘tish",
-    "subTitle": "Shaxsiy kabinet (ishlab chiqilmoqda)."
-  },
-  "AboutPage": {
-    "title": "Klinika va xizmat haqida",
-    "sub": "FondUz — axborot ko‘prigi: tibbiy yo‘nalishlarni tuzamiz va hamkor kontaktlarini beramiz. Ushbu saytda poliklinika qabuli yo‘q.",
-    "historyBadge": "Qanday ishlaydi",
-    "historyTitle": "Tanlash va shaffoflik",
-    "historyDesc": "Yo‘nalishni tanlaysiz, qisqacha o‘qib, yozilish uchun telefon va sayt olasiz. Kontent va narxlar keyin API orqali kelishi mumkin.",
-    "doctorsCount": "150+",
-    "doctorsLabel": "Hamkor mutaxassislar (vaqtinchalik)",
-    "patientsCount": "10k+",
-    "patientsLabel": "Murojaatlar yiliga (vaqtinchalik)",
-    "quote": "Biz bemor so‘rovini tekshirilgan kontakt bilan bog‘laymiz — ortiqcha shovqinsiz."
+    "noAccount": "Hisob yoqmi?",
+    "register": "Royxatdan otish",
+    "subTitle": "Ishlab chiqilmoqda"
   },
   "BlogPage": {
-    "title": "Yangiliklar va maqolalar",
-    "sub": "Salomatlik va xizmat haqida. CMS/API ulanguncha matnlar vaqtinchalik.",
-    "newsletterTitle": "Xabarlar",
-    "newsletterSub": "Email qoldiring — keyin API orqali yuboramiz.",
-    "newsletterCta": "Obuna",
-    "newsletterEmailPh": "you@example.com",
-    "readMore": "O‘qish",
-    "articles": [
-      {
-        "title": "Yo‘nalishlar katalogidan foydalanish",
-        "date": "12 mar 2026",
-        "category": "Xizmat"
-      },
-      {
-        "title": "Check-up: qayerdan boshlash",
-        "date": "5 mar 2026",
-        "category": "Salomatlik"
-      },
-      {
-        "title": "Hamkor kontaktlarini tekshirish",
-        "date": "1 mar 2026",
-        "category": "Maslahat"
-      }
-    ]
-  },
-  "ContactsPage": {
-    "title": "Aloqa",
-    "sub": "Xizmat bo‘yicha savollar. Shifokorga yozilish uchun tanlangan xizmatdagi telefon yoki saytdan foydalaning.",
-    "phoneLabel": "Telefon",
-    "emailLabel": "Email",
-    "formName": "Ism",
-    "formEmail": "Email",
-    "formMessage": "Xabar",
-    "formSubmit": "Yuborish",
-    "phoneValue": "+998 71 000 00 00",
-    "emailValue": "info@fonduz.placeholder"
-  },
-  "DoctorsPage": {
-    "title": "Jamo va mutaxassislar",
-    "sub": "Namuna kartochkalar (tarjimalardan). API bo‘lsa ro‘yxat avtomatik yangilanadi, bo‘lmasa shu vaqtinchalik qoladi.",
-    "searchPlaceholder": "Ism yoki mutaxassislik…",
-    "btnSearch": "Qidirish",
-    "experience": "Tajriba:",
-    "btnBook": "Bog‘lanish",
-    "cards": [
-      { "name": "Dr. Aleksandr Karimov", "role": "Kardiolog", "exp": "15 yil" },
-      { "name": "Dr. Yelena Smirnova", "role": "Pediatr", "exp": "10 yil" },
-      { "name": "Dr. Ivan Petrov", "role": "Nevrolog", "exp": "12 yil" },
-      { "name": "Dr. Mariya Ivanova", "role": "Terapevt", "exp": "8 yil" },
-      { "name": "Dr. Sergey Popov", "role": "Jarroh", "exp": "20 yil" },
-      { "name": "Dr. Anna Kuznetsova", "role": "Dermatolog", "exp": "7 yil" }
-    ]
-  },
-  "PricesPage": {
-    "title": "Narxlar",
-    "sub": "Paketlar bo‘yicha orientir (vaqtinchalik). Yakuniy narx — hamkorda.",
-    "period": "/oy",
-    "btnSelect": "Tanlash",
-    "plans": [
-      {
-        "name": "Bazaviy",
-        "price": "14",
-        "features": ["1 yo‘nalish tanlash", "Kartochkada kontaktlar", "Email yordam"]
-      },
-      {
-        "name": "Standart",
-        "price": "29",
-        "features": ["3 gacha yo‘nalish", "Navbatda ustuvorlik (placeholder)", "Eslatmalar"],
-        "highlight": true
-      },
-      {
-        "name": "Oilaviy",
-        "price": "59",
-        "features": ["Bir nechta profil", "Koordinator maslahati", "PDF hisobot"]
-      }
-    ]
+    "title": "Yangiliklar",
+    "sub": "Platforma materiallari",
+    "readMore": "Oqish"
   },
   "FAQPage": {
-    "title": "Tez-tez beriladigan savollar",
-    "sub": "FondUz xizmati haqida qisqacha.",
-    "items": [
-      {
-        "q": "Bu poliklinikami?",
-        "a": "Yo‘q. Bu yo‘riqnoma-sayt: yo‘nalish topishga yordam beramiz va hamkor kontaktlarini (telefon va sayt) beramiz."
-      },
-      {
-        "q": "Ma’lumotlar qayerdan?",
-        "a": "Hozircha tarjimalar va kodda vaqtinchalik ma’lumotlar. Keyin API dan yuklanadi; .env da API bo‘lmasa, xatoliksiz faqat vaqtinchalik ko‘rinadi."
-      },
-      {
-        "q": "Qanday yozilaman?",
-        "a": "Kerakli xizmatni oching va ko‘rsatilgan telefon yoki hamkor saytidan foydalaning."
-      }
-    ]
-  },
-  "PrivacyPage": {
-    "title": "Maxfiylik siyosati",
-    "sub": "Axborot xizmatida ma’lumotlarni qanday qayta ishlashimiz.",
-    "section1Title": "1. Ma’lumot yig‘ish",
-    "section1Desc": "Formalarda kiritgan ma’lumotlaringiz va brauzer texnik ma’lumotlari.",
-    "section2Title": "2. Foydalanish",
-    "section2Desc": "Ma’lumotlar siz bilan aloqa va xizmatni yaxshilash uchun.",
-    "section3Title": "3. Saqlash",
-    "section3Desc": "Standart himoya choralari. API ishga tushganda batafsilroq bo‘ladi."
-  },
-  "ServicesPage": {
-    "title": "Xizmatlar va yo‘nalishlar",
-    "sub": "Yo‘nalishni tanlang — tavsif va hamkor kontaktlari ochiladi (vaqtinchalik).",
-    "openDetail": "Batafsil",
-    "partnerTitle": "Yozilish va aloqa",
-    "phone": "Telefon",
-    "website": "Sayt",
-    "visitSite": "Saytga o‘tish",
-    "back": "Barcha yo‘nalishlar",
-    "notFound": "Sahifa topilmadi",
-    "heart": {
-      "title": "Yurak va tomirlar",
-      "excerpt": "Kardiologiya, EKG, kardiolog maslahati.",
-      "body": "Vaqtinchalik matn. Keyin CMS/API dan keladi. Pastda yozilish uchun telefon va sayt namunasi.",
-      "phone": "+998 90 000 00 01",
-      "website": "https://example.com/cardio"
-    },
-    "neurology": {
-      "title": "Nevrologiya",
-      "excerpt": "Bosh og‘riqlari, nevrolog, tekshiruvlar.",
-      "body": "Vaqtinchalik matn. API ulangach avtomatik yangilanadi.",
-      "phone": "+998 90 000 00 02",
-      "website": "https://example.com/neuro"
-    },
-    "orthopedics": {
-      "title": "Ortopediya va travma",
-      "excerpt": "Bo‘g‘imlar, umurtqa, reabilitatsiya.",
-      "body": "Yo‘nalish uchun vaqtinchalik tavsif.",
-      "phone": "+998 90 000 00 03",
-      "website": "https://example.com/ortho"
-    },
-    "pediatrics": {
-      "title": "Pediatriya",
-      "excerpt": "Bolalar qabuli, profilaktika, ma’lumotnomalar.",
-      "body": "Bolalar yo‘nalishi uchun vaqtinchalik matn.",
-      "phone": "+998 90 000 00 04",
-      "website": "https://example.com/peds"
-    },
-    "diagnostics": {
-      "title": "Diagnostika",
-      "excerpt": "Tahlillar, USG, MRT — hamkorlar bo‘yicha.",
-      "body": "Vaqtinchalik: tekshiruvlar ro‘yxati API dan keladi.",
-      "phone": "+998 90 000 00 05",
-      "website": "https://example.com/lab"
-    }
+    "title": "FAQ",
+    "sub": "Kop soraladigan savollar"
   }
 }

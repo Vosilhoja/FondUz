@@ -1,69 +1,59 @@
-"use client";
-
-import { Button } from "@/src/components/ui/Button";
+import Image from "next/image";
+import { Link } from "@/src/i18n/routing";
 import { Container } from "@/src/components/ui/Container";
-import { useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { Pagination } from "@/src/components/ui/Pagination";
+import { SectionHeader } from "@/src/components/ui/SectionHeader";
+import { doctors } from "@/src/features/doctors/data/doctors";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default function DoctorsPage() {
-  const t = useTranslations("DoctorsPage");
-  const [search, setSearch] = useState("");
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ page?: string }>;
+};
 
-  const doctors = t.raw("cards") as { name: string; role: string; exp: string }[];
+const PAGE_SIZE = 9;
 
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    if (!q) return doctors;
-    return doctors.filter(
-      (d) => d.name.toLowerCase().includes(q) || d.role.toLowerCase().includes(q),
-    );
-  }, [doctors, search]);
+export default async function DoctorsPage({ params, searchParams }: Props) {
+  const { locale } = await params;
+  const { page } = await searchParams;
+  setRequestLocale(locale);
+  const t = await getTranslations("doctors");
+  const currentPage = Math.max(1, Number(page) || 1);
+  const totalPages = Math.ceil(doctors.length / PAGE_SIZE);
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageDoctors = doctors.slice(start, start + PAGE_SIZE);
 
   return (
     <div className="pb-16 md:pb-24">
       <section className="border-b border-border bg-muted/40 py-12 md:py-16">
-        <Container className="text-center">
-          <h1 className="font-serif text-3xl text-foreground md:text-4xl lg:text-5xl">{t("title")}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground md:text-base">{t("sub")}</p>
-          <form
-            className="mx-auto mt-8 flex max-w-xl flex-col gap-2 sm:flex-row"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="search"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder={t("searchPlaceholder")}
-              className="h-10 min-w-0 flex-1 rounded-md border border-border bg-card px-3 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            />
-            <Button type="submit" variant="primary" className="h-10 shrink-0 rounded-md px-6">
-              {t("btnSearch")}
-            </Button>
-          </form>
+        <Container>
+          <SectionHeader title={t("title")} subtitle={t("subtitle")} />
         </Container>
       </section>
 
       <Container className="mt-10 md:mt-14">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((doc, i) => (
+        <div className="grid grid-cols-1 gap-15 sm:grid-cols-2 xl:grid-cols-3">
+          {pageDoctors.map((doc) => (
             <article
-              key={`${doc.name}-${i}`}
-              className="flex flex-col rounded-md border border-border bg-card p-6 text-center"
+              key={doc.id}
+              className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
             >
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-muted text-xl text-muted-foreground">
-                {(doc.name[0] ?? "?").toUpperCase()}
+              <Link href={`/doctors/${doc.id}`}>
+              <div className="relative h-[250px] md:h-[250px] w-full">
+                <Image src={doc.image} alt={doc.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
-              <h3 className="mt-4 font-serif text-lg text-foreground">{doc.name}</h3>
-              <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{doc.role}</p>
-              <p className="mt-4 border-t border-border pt-4 text-sm text-muted-foreground">
-                {t("experience")} <span className="font-medium text-foreground">{doc.exp}</span>
-              </p>
-              <Button variant="outline" className="mt-6 w-full rounded-md text-xs font-semibold uppercase tracking-wide">
-                {t("btnBook")}
-              </Button>
+              </Link>
+              <div className="flex flex-col p-5 gap-3 items-start">
+                <h3 className="font-serif text-2xl text-foreground">{doc.name}</h3>
+                <p className="mt-1 text-lg text-muted-foreground">{doc.profession}</p>
+                <Link href={`/doctors/${doc.id}`} className="mt-4 inline-flex rounded-xl bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground">
+                  {t("open")}
+                </Link>
+              </div>
             </article>
           ))}
         </div>
+        <Pagination currentPage={currentPage} totalPages={totalPages} basePath="/doctors" />
       </Container>
     </div>
   );

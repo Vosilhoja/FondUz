@@ -1,70 +1,38 @@
 "use client";
 
-import { Button } from "@/src/components/ui/Button";
 import { Container } from "@/src/components/ui/Container";
+import { prices } from "@/src/features/prices/data/prices";
 import { useTranslations } from "next-intl";
-
-type Plan = { name: string; price: string; features: string[]; highlight?: boolean };
+import { useState } from "react";
 
 export default function PricesPage() {
-  const t = useTranslations("PricesPage");
-  const plans = t.raw("plans") as Plan[];
+  const t = useTranslations("prices");
+  const [view, setView] = useState<"list" | "cards">("list");
 
   return (
     <div className="pb-16 md:pb-24">
       <section className="border-b border-border bg-muted/40 py-12 md:py-16">
         <Container className="text-center">
           <h1 className="font-serif text-3xl text-foreground md:text-4xl lg:text-5xl">{t("title")}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground md:text-base">{t("sub")}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground md:text-base">{t("subtitle")}</p>
         </Container>
       </section>
 
       <Container className="mt-10 md:mt-14">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:items-stretch">
-          {plans.map((plan, i) => (
-            <div
-              key={`${plan.name}-${i}`}
-              className={`flex flex-col rounded-md border p-6 md:p-8 ${
-                plan.highlight
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border bg-card"
-              }`}
-            >
-              <span
-                className={`text-[10px] font-semibold uppercase tracking-wide ${
-                  plan.highlight ? "text-primary-foreground/70" : "text-muted-foreground"
-                }`}
-              >
-                {plan.name}
-              </span>
-              <div className="mt-4 flex items-baseline gap-1">
-                <span className="font-serif text-4xl">${plan.price}</span>
-                <span
-                  className={`text-sm ${plan.highlight ? "text-primary-foreground/70" : "text-muted-foreground"}`}
-                >
-                  {t("period")}
-                </span>
-              </div>
-              <ul
-                className={`mt-6 flex-1 space-y-3 text-sm ${
-                  plan.highlight ? "text-primary-foreground/85" : "text-muted-foreground"
-                }`}
-              >
-                {plan.features.map((feat) => (
-                  <li key={feat} className="flex gap-2">
-                    <span className="text-primary">✓</span>
-                    <span>{feat}</span>
-                  </li>
-                ))}
+        <div className="mb-6 hidden justify-end gap-2 md:flex">
+          <button onClick={() => setView("list")} className={`rounded-xl border px-3 py-2 text-sm ${view === "list" ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card"}`}>{t("toggleList")}</button>
+          <button onClick={() => setView("cards")} className={`rounded-xl border px-3 py-2 text-sm ${view === "cards" ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card"}`}>{t("toggleCards")}</button>
+        </div>
+        <div className={`grid grid-cols-1 gap-4 ${view === "cards" ? "md:grid-cols-2 xl:grid-cols-3" : "md:block md:space-y-4"}`}>
+          {prices.map((item) => (
+            <article key={item.id} className="rounded-2xl border border-border bg-card p-5 shadow-sm">
+              <h2 className="font-serif text-xl">{item.title}</h2>
+              <p className="mt-2 text-lg font-semibold text-primary">{item.price}</p>
+              <h3 className="mt-4 text-sm font-semibold text-foreground">{t("includes")}</h3>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                {item.includes.map((line) => <li key={line}>{line}</li>)}
               </ul>
-              <Button
-                variant={plan.highlight ? "secondary" : "primary"}
-                className="mt-8 w-full rounded-md"
-                size="md"
-              >
-                {t("btnSelect")}
-              </Button>
-            </div>
+            </article>
           ))}
         </div>
       </Container>
