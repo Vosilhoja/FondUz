@@ -35,7 +35,7 @@ export async function getSession() {
       return null;
     }
     return payload;
-  } catch (e) {
+  } catch {
     return null;
   }
 }

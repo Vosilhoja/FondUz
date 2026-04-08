@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function AdminServicesPage() {
-  const [data, setData] = useState([
+  const [data] = useState([
     { id: 1, name: "Cardiology", funds: 8 },
     { id: 2, name: "Neurology", funds: 5 },
     { id: 3, name: "Orthopedics", funds: 12 },
@@ -46,7 +46,7 @@ export default function AdminServicesPage() {
                     <button className="rounded-xl border border-border px-3 py-1.5 text-xs font-bold transition-all hover:bg-muted">
                       Manage Funds
                     </button>
-                    <button className="rounded-xl border border-border px-3 py-1.5 text-xs font-bold transition-all hover:bg-muted text-red-500 hover:bg-red-500/10 hover:border-red-500/20">
+                    <button className="rounded-xl border border-border px-3 py-1.5 text-xs font-bold transition-all text-red-500 hover:bg-red-500/10 hover:border-red-500/20">
                       Delete
                     </button>
                   </div>

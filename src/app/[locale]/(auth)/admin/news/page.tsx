@@ -5,7 +5,6 @@ import { news as initialNews } from "@/src/features/news/data/news";
 
 export default function AdminNewsPage() {
   const [data, setData] = useState(initialNews);
-  const [isEditing, setIsEditing] = useState<string | null>(null);
 
   const handleDelete = (slug: string) => {
     setData(data.filter(item => item.slug !== slug));

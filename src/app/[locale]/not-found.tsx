@@ -1,5 +1,6 @@
 import { Container } from "@/src/components/ui/Container";
 import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/routing";
 
 export default function NotFoundPage() {
   const t = useTranslations("notFound");
@@ -10,12 +11,12 @@ export default function NotFoundPage() {
       <h2 className="mt-6 font-serif text-2xl text-foreground md:text-3xl">{t("title")}</h2>
       <p className="mt-4 max-w-md text-base text-muted-foreground text-center">{t("description")}</p>
       
-      <a
+      <Link
         href="/"
-        className="mt-8 rounded-2xl bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
+        className="mt-8 mb-4 inline-block rounded-2xl bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
       >
         {t("backHome")}
-      </a>
+      </Link>
     </Container>
   );
 }

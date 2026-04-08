@@ -48,7 +48,7 @@ export default function LoginPage() {
       } else {
         setError(`Server error: ${res.status}`);
       }
-    } catch (err) {
+    } catch {
       setError("Network error: Could not reach the server");
     } finally {
       setLoading(false);

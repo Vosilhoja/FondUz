@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function AdminPricesPage() {
-  const [data, setData] = useState([
+  const [data] = useState([
     { id: 1, name: "Consultation", price: "$50", billing: "One-time" },
     { id: 2, name: "Full Checkup", price: "$250", billing: "Per session" },
     { id: 3, name: "Lab Tests", price: "$120", billing: "Variable" },

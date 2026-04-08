@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Link } from "@/src/i18n/routing";
 
 export default function AdminDoctorsPage() {
   const [data, setData] = useState([
