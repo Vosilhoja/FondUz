@@ -1,0 +1,169 @@
+{
+  "common": {
+    "brand": "FondUz",
+    "view": "View",
+    "viewAll": "View all",
+    "backToList": "Back to list"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The requested page does not exist or has been moved.",
+    "backHome": "Back to home"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "doctors": "Doctors",
+    "prices": "Prices",
+    "news": "News",
+    "contacts": "Contacts",
+    "faqs": "FAQ"
+  },
+  "home": {
+    "heroTitle": "Medical Funds Aggregator Platform",
+    "heroSubtitle": "We match your direction and connect you with partners using clear contacts and links.",
+    "heroCta": "View funds",
+    "activityTitle": "Our Activity",
+    "activityText": "FondUz acts as a bridge between the user and specialized funds: the system structures directions, helps to choose the right specialization, shows partners' contacts, and provides a clear path to apply. We make navigating medical services calm and transparent so that a person can quickly find the right route without an overloaded interface and extra steps.",
+    "newsTitle": "News",
+    "newsSubtitle": "Brief updates of the platform and partner network.",
+    "faqsTitle": "Frequently Asked Questions",
+    "faqsSubtitle": "Key answers about the platform's operation.",
+    "viewAllNews": "View all news",
+    "viewAllFaqs": "View all"
+  },
+  "about": {
+    "title": "About FondUz Platform",
+    "subtitle": "FondUz does not provide clinical appointments. The platform acts as a bridge between users and partner funds.",
+    "body": "FondUz acts as a bridge between the user and specialized funds: the system structures directions, helps to choose the right specialization, shows partners' contacts, and provides a clear path to apply."
+  },
+  "services": {
+    "title": "Medical Directions",
+    "subtitle": "Choose a profession and go to partner funds.",
+    "fundsCount": "{count} funds",
+    "open": "Open",
+    "back": "All directions",
+    "partnerTitle": "Partner Fund",
+    "phone": "Phone",
+    "website": "Website",
+    "extraInfo": "Additionally"
+  },
+  "doctors": {
+    "title": "Specialists",
+    "subtitle": "Specialist cards for orientation by professions and directions.",
+    "open": "View",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "prices": {
+    "title": "Packages and Prices",
+    "subtitle": "Compare services in a convenient format. Final conditions are clarified with partners.",
+    "toggleList": "List",
+    "toggleCards": "Cards",
+    "includes": "What's included"
+  },
+  "news": {
+    "title": "Platform News",
+    "subtitle": "Up-to-date information on directions and partner funds.",
+    "open": "View",
+    "back": "All news"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Use the contacts below for questions regarding the platform. For appointments, go to the partner on the direction page.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "phoneValue": "+998 71 000 00 00",
+    "emailValue": "info@fonduz.uz",
+    "addressValue": "Tashkent, Example st., 1"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Main questions about the bridge platform.",
+    "items": [
+      { "question": "Is this a clinic?", "answer": "No. FondUz is an aggregator and a bridge to partner funds." },
+      { "question": "How to make an appointment?", "answer": "Open the desired direction and contact the partner by phone or website." },
+      { "question": "Where does the data on the site come from?", "answer": "Currently using typed mock data preparing for API." },
+      { "question": "Can I compare prices?", "answer": "Yes, the pricing section shows structured packages and service composition." }
+    ]
+  },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Message sent successfully."
+  },
+  "errors": {
+    "nameRequired": "Enter a name",
+    "emailInvalid": "Enter a valid email",
+    "messageMin": "The message must be at least 10 characters long"
+  },
+  "footer": {
+    "description": "FondUz - an aggregator platform for medical directions and partner funds.",
+    "copyright": "© 2026 FondUz. All rights reserved."
+  },
+  "Common": {
+    "themeLight": "Light Theme",
+    "themeDark": "Dark Theme"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "News",
+    "doctors": "Doctors",
+    "prices": "Prices",
+    "contact": "Contacts",
+    "faq": "FAQ",
+    "searchPlaceholder": "Search"
+  },
+  "SearchPage": {
+    "title": "Search",
+    "submit": "Find",
+    "queryLabel": "Query:",
+    "placeholder": "Enter your query...",
+    "resultsFound": "Found: {count}",
+    "noResults": "Nothing found",
+    "backToHome": "Back to Home",
+    "loading": "Loading...",
+    "hint": "Hint",
+    "serviceNames": {
+      "heart": "Heart",
+      "neurology": "Neurology",
+      "orthopedics": "Orthopedics",
+      "pediatrics": "Pediatrics",
+      "diagnostics": "Diagnostics"
+    }
+  },
+  "Auth": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "subTitle": "In development"
+  },
+  "BlogPage": {
+    "title": "News",
+    "sub": "Platform Materials",
+    "readMore": "Read more"
+  },
+  "FAQPage": {
+    "title": "FAQ",
+    "sub": "Frequent Questions"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "sub": "We respect your privacy and are committed to protecting your personal data.",
+    "section1Title": "Data Collection",
+    "section1Desc": "We collect only the data necessary for the effective operation of the platform and communication with partners.",
+    "section2Title": "Data Usage",
+    "section2Desc": "Your data is used solely for navigation and improving the user experience on the FondUz site.",
+    "section3Title": "Security",
+    "section3Desc": "We take all modern security measures to prevent unauthorized access to information."
+  }
+}

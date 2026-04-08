@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type AccordionItem = {
   question: string;
@@ -20,22 +21,43 @@ export function Accordion({ title, subtitle, items }: AccordionProps) {
     <section>
       {title ? <h2 className="font-serif text-2xl text-foreground md:text-3xl">{title}</h2> : null}
       {subtitle ? <p className="mt-3 text-sm text-muted-foreground md:text-base">{subtitle}</p> : null}
-      <div className="mt-6 space-y-2">
+      <div className="mt-6 space-y-3">
         {items.map((item, index) => {
           const isOpen = openIndex === index;
           return (
-            <div key={item.question} className="overflow-hidden rounded-2xl border border-border/60 bg-card/60 backdrop-blur-md shadow-sm transition-all hover:shadow-md hover:border-border">
+            <div
+              key={item.question}
+              className="overflow-hidden rounded-2xl border border-border/60 bg-card/60 backdrop-blur-md shadow-sm transition-all hover:shadow-md hover:border-border"
+            >
               <button
                 type="button"
                 className="flex w-full cursor-pointer items-center justify-between gap-3 p-5 text-left transition-colors hover:bg-muted/50"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
               >
-                <span className="text-sm font-semibold text-foreground md:text-base">{item.question}</span>
-                <span className={`flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
+                <span className={`text-sm font-semibold md:text-base transition-colors ${isOpen ? "text-primary" : "text-foreground"}`}>
+                  {item.question}
+                </span>
+                <motion.span
+                  animate={{ rotate: isOpen ? 45 : 0 }}
+                  className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary"
+                >
+                  +
+                </motion.span>
               </button>
-              {isOpen ? (
-                <div className="border-t border-border/40 px-5 py-4 text-sm leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-top-1 duration-200">{item.answer}</div>
-              ) : null}
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <div className="border-t border-border/40 px-5 py-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                      {item.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}

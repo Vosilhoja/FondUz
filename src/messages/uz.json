@@ -155,5 +155,15 @@
   "FAQPage": {
     "title": "FAQ",
     "sub": "Kop soraladigan savollar"
+  },
+  "privacy": {
+    "title": "Maxfiylik siyosati",
+    "sub": "Biz sizning maxfiyligingizni hurmat qilamiz va shaxsiy ma'lumotlaringizni himoya qilishga intilamiz.",
+    "section1Title": "Ma'lumotlarni yig'ish",
+    "section1Desc": "Biz faqat platformaning samarali ishlashi va hamkorlar bilan aloqa qilish uchun zarur bo'lgan ma'lumotlarni yig'amiz.",
+    "section2Title": "Ma'lumotlardan foydalanish",
+    "section2Desc": "Sizning ma'lumotlaringiz faqat FondUz saytida navigatsiya va foydalanuvchi tajribasini yaxshilash uchun ishlatiladi.",
+    "section3Title": "Xavfsizlik",
+    "section3Desc": "Biz ma'lumotlarga ruxsatsiz kirishning oldini olish uchun barcha zamonaviy xavfsizlik choralarini ko'ramiz."
   }
 }

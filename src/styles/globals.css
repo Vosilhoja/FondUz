@@ -24,13 +24,13 @@
 
 /* Светлая тема: фон чуть светлее прежнего */
 :root {
-  --background: #f7fef9;
+  --background: #f0fdf4;
   --foreground: #064e3b;
   --card: #ffffff;
   --card-foreground: #064e3b;
   --muted: #ecfdf5;
   --muted-foreground: #37554b;
-  --border: #14532d;
+  --border: #dcfce7;
   --primary: #22c55e;
   --primary-foreground: #ffffff;
   --accent: #dcfce7;
@@ -40,13 +40,13 @@
 }
 
 .dark {
-  --background: #020b08;
+  --background: #061d17;
   --foreground: #f0fdf4;
   --card: #051a14;
   --card-foreground: #f0fdf4;
-  --muted: #06241c;
+  --muted: #0b2b23;
   --muted-foreground: #94a3b8;
-  --border: #065f46;
+  --border: rgba(255, 255, 255, 0.1);
   --primary: #166534;
   --primary-foreground: #ffffff;
   --accent: #064e3b;

@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactsHero } from "./components/ContactsHero";
 import { ContactsInfo } from "./components/ContactsInfo";
 import { ContactForm } from "./components/ContactForm";
+import { siteConfig } from "@/src/config/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -20,11 +21,11 @@ export default async function ContactsPage({ params }: Props) {
           <ContactsHero title={t("title")} subtitle={t("subtitle")} />
           <ContactsInfo
             phoneLabel={t("phoneLabel")}
-            phoneValue={t("phoneValue")}
+            phoneValue={siteConfig.contacts.phone}
             emailLabel={t("emailLabel")}
-            emailValue={t("emailValue")}
+            emailValue={siteConfig.contacts.email}
             addressLabel={t("addressLabel")}
-            addressValue={t("addressValue")}
+            addressValue={siteConfig.contacts.address}
           />
         </div>
 

@@ -15,8 +15,6 @@ export default async function ServicesIndexPage({ params }: Props) {
       <ServicesHero title={t("title")} subtitle={t("subtitle")} />
       <ProfessionList
         professions={professions}
-        fundsCountText={(count) => t("fundsCount", { count })}
-        openText={t("open")}
       />
     </div>
   );

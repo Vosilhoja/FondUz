@@ -2,7 +2,12 @@ import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
 import type { ReactNode } from "react";
 
-export default function WebLayout({ children }: { children: ReactNode }) {
+import { setRequestLocale } from "next-intl/server";
+
+export default async function WebLayout({ children, params }: { children: ReactNode, params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />

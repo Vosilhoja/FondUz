@@ -4,12 +4,14 @@ import { Container } from "@/src/components/ui/Container";
 import { Link } from "@/src/i18n/routing";
 import { useTranslations } from "next-intl";
 
+import { siteConfig } from "@/src/config/site";
+
 export default function Footer() {
   const t = useTranslations("footer");
   const tc = useTranslations("common");
   const tNav = useTranslations("nav");
   const tContacts = useTranslations("contacts");
-  const pageLinks = ["/", "/about", "/services", "/doctors", "/prices", "/news", "/contacts", "/faqs"] as const;
+  const pageLinks = siteConfig.mainNav.map(item => item.href);
 
   return (
     <footer className="mt-10 border-t border-border bg-card/95 py-12">
@@ -34,9 +36,9 @@ export default function Footer() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Contacts</p>
             <div className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <p><span className="text-foreground">{tContacts("phoneLabel")}:</span> <a href={`tel:${tContacts("phoneValue").replace(/\s/g, "")}`} className="hover:text-foreground">{tContacts("phoneValue")}</a></p>
-              <p><span className="text-foreground">{tContacts("emailLabel")}:</span> <a href={`mailto:${tContacts("emailValue")}`} className="hover:text-foreground">{tContacts("emailValue")}</a></p>
-              <p><span className="text-foreground">{tContacts("addressLabel")}:</span> {tContacts("addressValue")}</p>
+              <p><span className="text-foreground">{tContacts("phoneLabel")}:</span> <a href={`tel:${siteConfig.contacts.phone.replace(/\s/g, "")}`} className="hover:text-foreground">{siteConfig.contacts.phone}</a></p>
+              <p><span className="text-foreground">{tContacts("emailLabel")}:</span> <a href={`mailto:${siteConfig.contacts.email}`} className="hover:text-foreground">{siteConfig.contacts.email}</a></p>
+              <p><span className="text-foreground">{tContacts("addressLabel")}:</span> {siteConfig.contacts.address}</p>
             </div>
           </div>
         </div>

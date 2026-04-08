@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
   nameLabel: string;
@@ -57,7 +58,11 @@ export function ContactForm({
   };
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0, x: 20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-4 rounded-2xl border border-border bg-card p-6 text-left shadow-sm md:p-8"
     >
@@ -85,11 +90,18 @@ export function ContactForm({
       >
         {submitLabel}
       </Button>
-      {success && (
-        <div className="mt-4 rounded-xl bg-primary/10 p-3 text-center text-sm font-medium text-primary border border-primary/20 animate-in fade-in slide-in-from-bottom-2">
-          {success}
-        </div>
-      )}
-    </form>
+      <AnimatePresence>
+        {success && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="mt-4 rounded-xl bg-primary/10 p-3 text-center text-sm font-medium text-primary border border-primary/20"
+          >
+            {success}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.form>
   );
 }

@@ -1,4 +1,7 @@
+"use client";
+
 import { Container } from "@/src/components/ui/Container";
+import { motion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -9,8 +12,22 @@ export function PricesHero({ title, subtitle }: Props) {
   return (
     <section className="border-b border-border bg-muted/40 py-12 md:py-16">
       <Container className="text-center">
-        <h1 className="font-serif text-3xl text-foreground md:text-4xl lg:text-5xl">{title}</h1>
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground md:text-base">{subtitle}</p>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="font-serif text-3xl text-foreground md:text-4xl lg:text-5xl"
+        >
+          {title}
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground md:text-base"
+        >
+          {subtitle}
+        </motion.p>
       </Container>
     </section>
   );
