@@ -5,6 +5,11 @@
     "viewAll": "Barchasini ko'rish",
     "backToList": "Ro'yxatga qaytish"
   },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "description": "Siz izlayotgan sahifa mavjud emas yoki qidirilyotgan manzil o'zgargan.",
+    "backHome": "Bosh sahifaga"
+  },
   "nav": {
     "home": "Bosh sahifa",
     "about": "Loyiha haqida",

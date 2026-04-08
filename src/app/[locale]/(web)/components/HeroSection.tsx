@@ -10,11 +10,10 @@ type Props = {
 export function HeroSection({ title, subtitle, actionLabel }: Props) {
   return (
     <section
-      className="relative min-h-[70vh] bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('/placeholders/news.svg')" }}
+      className="relative min-h-[100vh] bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: "url('/img/samarkand-registan.jpg')" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/40 to-black/55" />
-      <Container className="relative flex min-h-[70vh] items-center justify-center">
+      <Container className="relative flex min-h-[100vh] items-center justify-center">
         <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-white/10 p-6 text-center backdrop-blur-sm md:p-10">
           <h1 className="font-serif text-3xl text-white md:text-5xl">{title}</h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-white/90 md:text-base">{subtitle}</p>

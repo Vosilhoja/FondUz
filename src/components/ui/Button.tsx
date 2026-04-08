@@ -7,7 +7,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   href?: string;
   params?: Record<string, string>;
+  isLoading?: boolean;
 }
+
 
 export const Button = ({
   variant = "primary",
@@ -16,15 +18,18 @@ export const Button = ({
   children,
   href,
   params,
+  isLoading,
   ...props
 }: ButtonProps) => {
+
   const baseStyles =
-    "inline-flex items-center justify-center rounded-xl border font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50";
+    "inline-flex items-center justify-center rounded-2xl border font-semibold tracking-tight transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 active:scale-95";
 
   const variants = {
-    primary: "border-primary bg-primary text-primary-foreground shadow-sm hover:-translate-y-0.5 hover:bg-primary/90",
-    secondary: "border-border bg-card text-foreground shadow-sm hover:-translate-y-0.5 hover:bg-muted",
+    primary: "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30",
+    secondary: "border-border/60 bg-card/50 backdrop-blur-md text-foreground shadow-sm hover:bg-muted hover:-translate-y-0.5 hover:border-border",
   };
+
 
   const sizes = {
     sm: "px-3 py-1.5 text-sm",
@@ -43,5 +48,15 @@ export const Button = ({
     );
   }
 
-  return <button className={shared} type="button" {...props}>{children}</button>;
+  return (
+    <button className={shared} type="button" disabled={props.disabled || isLoading} {...props}>
+      {isLoading ? (
+        <svg className="mr-2 h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+        </svg>
+      ) : null}
+      {children}
+    </button>
+  );
 };
+

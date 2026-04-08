@@ -19,12 +19,13 @@ export function Pagination({ currentPage, totalPages, basePath }: Props) {
           <Link
             key={page}
             href={`${basePath}?page=${page}`}
-            className={`inline-flex h-9 min-w-9 items-center justify-center rounded-md border px-3 text-sm ${
+            className={`inline-flex h-10 min-w-10 items-center justify-center rounded-2xl border px-4 text-sm font-semibold transition-all ${
               isActive
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-border bg-card text-foreground hover:bg-muted"
+                ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                : "border-border/60 bg-card/60 backdrop-blur-sm text-foreground hover:bg-muted hover:border-border"
             }`}
           >
+
             {page}
           </Link>
         );

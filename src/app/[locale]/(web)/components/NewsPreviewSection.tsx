@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/src/components/ui/Button";
 import { Container } from "@/src/components/ui/Container";
 import { Link } from "@/src/i18n/routing";
-import type { HomeNewsCard } from "../types";
+import type { HomeNewsCard } from "../utils/types";
 
 type Props = {
   title: string;

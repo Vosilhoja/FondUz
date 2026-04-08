@@ -1,7 +1,7 @@
 import { Accordion } from "@/src/components/ui/Accordion";
 import { Button } from "@/src/components/ui/Button";
 import { Container } from "@/src/components/ui/Container";
-import type { HomeFaqItem } from "../types";
+import type { HomeFaqItem } from "../utils/types";
 
 type Props = {
   title: string;

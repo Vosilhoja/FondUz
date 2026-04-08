@@ -34,7 +34,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={`${inter.variable} ${fraunces.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen antialiased bg-background text-foreground">
+      <body className="min-h-screen antialiased bg-background text-foreground" suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AppProviders>{children}</AppProviders>
         </NextIntlClientProvider>

@@ -1,0 +1,78 @@
+import { Container } from "@/src/components/ui/Container";
+
+type Fund = {
+  id: string;
+  name: string;
+  phone: string;
+  website: string;
+  description?: string;
+  professionSlug: string;
+};
+
+type Props = {
+  funds: Fund[];
+  phoneLabel: string;
+  websiteLabel: string;
+  extraInfoLabel: string;
+  partnerTitle: string;
+};
+
+export function FundList({
+  funds,
+  phoneLabel,
+  websiteLabel,
+  extraInfoLabel,
+  partnerTitle,
+}: Props) {
+  return (
+    <Container className="mt-10 md:mt-12">
+      <div className="space-y-6">
+        {funds.map((fund) => (
+          <div
+            key={fund.id}
+            className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm transition-all hover:bg-muted/10 hover:shadow-md"
+          >
+            <h2 className="font-serif text-2xl text-foreground mb-6">{fund.name}</h2>
+            <dl className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+              <div className="space-y-1">
+                <dt className="text-muted-foreground font-medium uppercase tracking-wider text-[10px]">{phoneLabel}</dt>
+                <dd>
+                  <a
+                    href={`tel:${fund.phone.replace(/\s/g, "")}`}
+                    className="text-lg font-serif text-primary hover:underline transition-colors"
+                  >
+                    {fund.phone}
+                  </a>
+                </dd>
+              </div>
+              <div className="space-y-1">
+                <dt className="text-muted-foreground font-medium uppercase tracking-wider text-[10px]">{websiteLabel}</dt>
+                <dd>
+                  <a
+                    href={fund.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-serif text-primary hover:underline transition-colors"
+                  >
+                    {fund.website}
+                  </a>
+                </dd>
+              </div>
+              {fund.description ? (
+                <div className="md:col-span-2 space-y-2 mt-2 border-t border-border/50 pt-4">
+                  <dt className="text-muted-foreground font-medium uppercase tracking-wider text-[10px]">{extraInfoLabel}</dt>
+                  <dd className="text-sm leading-relaxed text-muted-foreground bg-muted/30 p-4 rounded-xl border border-border/30 italic">
+                    {fund.description}
+                  </dd>
+                </div>
+              ) : null}
+            </dl>
+          </div>
+        ))}
+        <div className="rounded-2xl border border-border/50 bg-muted/40 p-5 text-center text-sm text-muted-foreground backdrop-blur-sm">
+          {partnerTitle}
+        </div>
+      </div>
+    </Container>
+  );
+}

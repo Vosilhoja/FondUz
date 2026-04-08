@@ -1,9 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ActivitySection } from "./_home/components/ActivitySection";
-import { FaqPreviewSection } from "./_home/components/FaqPreviewSection";
-import { HeroSection } from "./_home/components/HeroSection";
-import { NewsPreviewSection } from "./_home/components/NewsPreviewSection";
-import { getHomePreviewFaqs, getHomePreviewNews } from "./_home/utils";
+import { ActivitySection } from "./components/ActivitySection";
+import { FaqPreviewSection } from "./components/FaqPreviewSection";
+import { HeroSection } from "./components/HeroSection";
+import { NewsPreviewSection } from "./components/NewsPreviewSection";
+import { getHomePreviewFaqs, getHomePreviewNews } from "./utils/utils";
+
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -24,50 +24,60 @@
 
 /* Светлая тема: фон чуть светлее прежнего */
 :root {
-  --background: #f4f8f3;
-  --foreground: #173126;
+  --background: #f7fef9;
+  --foreground: #064e3b;
   --card: #ffffff;
-  --card-foreground: #173126;
-  --muted: #eaf2e7;
-  --muted-foreground: #5f746a;
-  --border: #d5e5d4;
-  --primary-green: #3d8f63;
-  --sage: #b8d9c1;
-  --cream: #f1f8ef;
-  --primary: var(--primary-green);
-  --primary-foreground: #f4f6f0;
-  --accent: var(--sage);
-  --accent-foreground: #0c2a1c;
-  --ring: #0d3d2888;
+  --card-foreground: #064e3b;
+  --muted: #ecfdf5;
+  --muted-foreground: #37554b;
+  --border: #14532d;
+  --primary: #22c55e;
+  --primary-foreground: #ffffff;
+  --accent: #dcfce7;
+  --accent-foreground: #166534;
+  --ring: #22c55e;
+  --radius: 1rem;
 }
 
 .dark {
-  --background: #0f1a15;
-  --foreground: #e9eee8;
-  --card: #152820;
-  --card-foreground: #e9eee8;
-  --muted: #1f3228;
-  --muted-foreground: #9caea4;
-  --border: #2a3d34;
-  --primary-green: #6eb896;
-  --sage: #7a9178;
-  --cream: #1a2620;
-  --primary: #6eb896;
-  --primary-foreground: #0f1a15;
-  --accent: #2a3d34;
-  --accent-foreground: #e9eee8;
-  --ring: #6eb89666;
+  --background: #020b08;
+  --foreground: #f0fdf4;
+  --card: #051a14;
+  --card-foreground: #f0fdf4;
+  --muted: #06241c;
+  --muted-foreground: #94a3b8;
+  --border: #065f46;
+  --primary: #166534;
+  --primary-foreground: #ffffff;
+  --accent: #064e3b;
+  --accent-foreground: #dcfce7;
+  --ring: #059669;
 }
+
+
 
 body {
   background:
-    radial-gradient(circle at top right, #e8f6e8 0%, transparent 32%),
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.05) 0%, transparent 40%),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.glass {
+  background: color-mix(in srgb, var(--card) 60%, transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in srgb, var(--border) 40%, transparent);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h1,
@@ -78,11 +88,14 @@ h5,
 h6 {
   font-family: var(--font-serif);
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 * {
   border-color: var(--border);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
+
 
 button {
   cursor: pointer;

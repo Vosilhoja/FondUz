@@ -12,10 +12,11 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
   return (
     <textarea
       ref={ref}
-      className={`w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
-        hasError ? "border-red-500" : "border-border"
+      className={`min-h-[120px] w-full rounded-2xl border bg-card/50 backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all focus:outline-none focus:bg-card focus:border-primary/50 focus:ring-4 focus:ring-primary/10 ${
+        hasError ? "border-red-500 shadow-sm shadow-red-500/10" : "border-border/60 shadow-sm shadow-emerald-500/5"
       } ${className}`}
       {...props}
     />
+
   );
 });
