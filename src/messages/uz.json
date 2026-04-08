@@ -150,7 +150,16 @@
   "BlogPage": {
     "title": "Yangiliklar",
     "sub": "Platforma materiallari",
-    "readMore": "Oqish"
+    "readMore": "Oqish",
+    "newsletterTitle": "Yangiliklarga obuna bo'ling",
+    "newsletterSub": "So'nggi yangilanishlarni to'g'ridan-to'g'ri pochtangizga oling.",
+    "newsletterEmailPh": "Sizning email",
+    "newsletterCta": "Obuna bo'lish",
+    "articles": [
+      { "title": "FondUz platformasining ochilishi", "date": "12 Aprel, 2026", "category": "Platforma" },
+      { "title": "Kardiologiya sohasidagi yangi hamkorlar", "date": "15 Aprel, 2026", "category": "Tibbiyot" },
+      { "title": "Klinikani qanday qilib to'g'ri tanlash mumkin", "date": "18 Aprel, 2026", "category": "Maslahatlar" }
+    ]
   },
   "FAQPage": {
     "title": "FAQ",

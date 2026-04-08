@@ -150,7 +150,16 @@
   "BlogPage": {
     "title": "News",
     "sub": "Platform Materials",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "newsletterTitle": "Newsletter Subscription",
+    "newsletterSub": "Get the latest updates directly to your inbox.",
+    "newsletterEmailPh": "Your email address",
+    "newsletterCta": "Subscribe",
+    "articles": [
+      { "title": "Opening of the new FondUz platform", "date": "April 12, 2026", "category": "Platform" },
+      { "title": "New partners in cardiology", "date": "April 15, 2026", "category": "Medicine" },
+      { "title": "How to choose the right clinic", "date": "April 18, 2026", "category": "Tips" }
+    ]
   },
   "FAQPage": {
     "title": "FAQ",
