@@ -25,8 +25,7 @@ export default function Header() {
   const navLinks = siteConfig.mainNav.map(item => item.href);
 
   const toggleLanguage = () => {
-    const locales = ["ru", "uz", "en"];
-    const nextLocale = locales[(locales.indexOf(locale) + 1) % locales.length] || "ru";
+    const nextLocale = locale === "uz" ? "ru" : "uz";
     router.replace(pathname, { locale: nextLocale });
   };
 

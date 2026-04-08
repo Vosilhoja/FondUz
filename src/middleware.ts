@@ -33,5 +33,5 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   // Use a matcher that covers all potential entry points
-  matcher: ["/", "/(ru|uz|en)/:path*", "/((?!api|_next|_vercel|.*\\..*).*)"],
+  matcher: ["/", "/(ru|uz)/:path*", "/((?!api|_next|_vercel|.*\\..*).*)"],
 };
